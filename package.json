@@ -1,0 +1,27 @@
+{
+  "name": "edavids",
+  "version": "1.0.0",
+  "description": "Portfolio for Jeremiah E David",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/me-edavids/scss-portfolio-design.git"
+  },
+  "keywords": [
+    "edavids",
+    "portfolio",
+    "website",
+    "personal",
+    "website",
+    "template"
+  ],
+  "author": "Jeremiah David",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/me-edavids/scss-portfolio-design/issues"
+  },
+  "homepage": "https://github.com/me-edavids/scss-portfolio-design#readme"
+}

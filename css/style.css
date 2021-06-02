@@ -1,0 +1,220 @@
+/* 
+COLORS
+
+.dark-primary-color    { background: ##512DA8; }
+.default-primary-color { background: ##673AB7; }
+.light-primary-color   { background: ##D1C4E9; }
+.text-primary-color    { color: #212121; }
+.accent-color          { background: ##7C4DFF; }
+.primary-text-color    { color: #212121; }
+.secondary-text-color  { color: #757575; }
+.divider-color         { border-color: #BDBDBD; }
+
+*/
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  50% {
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  50% {
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+html {
+    /* 10px / default chrome size 16px */
+    font-size: 62.5%;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1.4; /* 1.4 timex the original font size*/
+  color: #212121;
+  background-color: #d1c4e9;
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Limelight", cursive;
+  color: #212121;
+}
+
+a:link,
+a:visited {
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #212121;
+}
+
+.header {
+  height: 90vh;
+  background-image: linear-gradient(to bottom left, #683ab796, #522da8c0),
+    url(../images/paper-bg/space.jpg);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  /* display: flex; */
+  /* flex-wrap: wrap; */
+  /* justify-content: center; */
+}
+
+.header__logo-box {
+  position: absolute;
+  top: 1.6rem;
+  left: 1.6rem;
+}
+
+.header__logo {
+  height: 3.6rem;
+}
+.header__logo:hover {
+  animation-name: rotate;
+  animation-duration: 2s;
+  animation-delay: 0.4s;
+  animation-timing-function: all 1s ease;
+  animation-iteration-count: infinite;
+
+}
+
+.header__text-box {
+  position: absolute;
+  top: 46%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.primary-heading {
+  color: white;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+}
+
+.primary-heading--main {
+    font-size: 3.2rem;
+  letter-spacing: 0.86rem;
+  display: block;
+
+  animation-name: slideInLeft;
+  animation-duration: 3s;
+  animation-timing-function: all 1s ease-out;
+}
+
+.primary-heading--sub {
+  font-family: "Open Sans", sans-serif;
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.47rem;
+  line-height: 1.7;
+  margin: 0.6rem 0 6.0rem 0;
+  color: #d1c4e9;
+
+
+  animation-name: slideInRight;
+  animation-duration: 3s;
+  animation-timing-function: all 1s ease-out;
+}
+
+.highlight {
+  background-color: #d1c4e9;
+  color: #212121;
+  padding: 0.4rem;
+
+  transition: all 0.3s ease-in;
+}
+.underline {
+  padding-bottom: 0.3rem;
+  border-bottom: 0.2rem solid #d1c4e9;
+
+  transition: all 0.3s ease-in;
+}
+
+.btn:link,
+.btn:visited {
+    padding: .8rem 2rem;
+    display: inline-block;
+    border-radius: 2rem;
+    transition: all .2s;
+    letter-spacing: .2rem;
+}
+
+
+.btn .las {
+    transition: all ease-out .2s;
+}
+
+.btn:hover .las {
+    margin-left: -0.4rem;
+    margin-right: .4rem;
+    font-size: 1.6rem;
+    backface-visibility: hidden;
+}
+
+.btn:hover {
+    transform: translateY(-0.3rem);
+    /*box-shadow = x y blur color*/
+    box-shadow: 0 .8rem 1rem rgba(33, 33, 33, 0.5); 
+    backface-visibility: hidden;
+}
+
+.btn:active .las {
+    margin-left: 0;
+    margin-right: 0;
+    font-size: 1.2rem;
+}
+
+
+.btn:active {
+    transform: translateY(-0.2rem);
+    /*box-shadow = x y blur color*/
+    box-shadow: 0 .2rem .4rem rgba(33, 33, 33, 0.5); 
+}
+
+.btn--light {
+    background-color: #d1c4e9;
+}
